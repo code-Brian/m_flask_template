@@ -11,8 +11,8 @@
   export -f pyi
   
   function gitmflasktemplate(name){
-      mkdir $name && echo "------------------- CREATING NEW PROJECT DIRECTORY -------------------"
-      cd $name && echo "------------------- CHANGING INTO PROJECT DIRECTORY -------------------"
+      mkdir $1 && echo "------------------- CREATING NEW PROJECT DIRECTORY -------------------"
+      cd $1 && echo "------------------- CHANGING INTO PROJECT DIRECTORY -------------------"
       git clone https://github.com/code-Brian/m_flask_template.git && echo "------------------- GIT REPO CLONED -------------------"
       rm -r .git && echo "------------------- GIT FILE DELETED -------------------"
       pyi() && echo "------------------- INSTALLING FLASK AND PYMYSQL -------------------"
