@@ -12,12 +12,12 @@
   export -f pys
   
   function gitmflasktemplate(name){
-      git clone # repo goes here && echo "------------------- GIT REPO CLONED -------------------"
-      mv flask-template $1
-      cd $1 $$ echo "------------------- CHANGING INTO PROJECT DIRECTORY -------------------"
+      mkdir $name && echo "------------------- CREATING NEW PROJECT DIRECTORY -------------------"
+      cd $name && echo "------------------- CHANGING INTO PROJECT DIRECTORY -------------------"
+      git clone https://github.com/code-Brian/m_flask_template.git && echo "------------------- GIT REPO CLONED -------------------"
       rm -r .git && echo "------------------- GIT FILE DELETED -------------------"
       pyi() && echo "------------------- INSTALLING FLASK AND PYMYSQL -------------------"
   }
   export -f gitmflasktemplate
   ```
-<p> I hope this template is helpful, and please ping myself or Robert if there are any questions!</p>
+<p> I hope this template is helpful. Please ping myself or Robert (rteet702) if there are any questions!</p>
