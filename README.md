@@ -1,6 +1,9 @@
 # m_flask_template
 <p>This is a modularized flask template, ready to go.</p>
 <p>Template credit and thanks to: rteet702</p>
+
+
+## BASHRC
 <p>This template is used with bashrc code to clone the template into a new project directory. 
   To get the full benefit of this template, add the following code snippets to your bashrc file:</p>
   
@@ -10,13 +13,23 @@
   }
   export -f pyi
   
-  function gitmflasktemplate(){
-      mkdir $1 && echo "------------------- CREATING NEW PROJECT DIRECTORY -------------------"
-      cd $1 && echo "------------------- CHANGING INTO PROJECT DIRECTORY -------------------"
-      git clone https://github.com/code-Brian/m_flask_template.git && echo "------------------- GIT REPO CLONED -------------------"
-      rm -r .git && echo "------------------- GIT FILE DELETED -------------------"
-      pyi
-  }
+  function gitmflasktemplate(name){
+    git clone https://github.com/code-Brian/m_flask_template.git && echo "------------------- GIT REPO CLONED -------------------"
+    mv flask-template $1
+    cd $1 $$ echo "------------------- CHANGING INTO PROJECT DIRECTORY -------------------"
+    rm -r .git && echo "------------------- GIT FILE DELETED -------------------"
+    pyi && echo "------------------- INSTALLING FLASK AND PYMYSQL -------------------"
+  } 
   export -f gitmflasktemplate
   ```
 <p> I hope this template is helpful. Please ping myself or Robert (https://github.com/rteet702) if there are any questions!</p>
+In order to generate the template using this method, after updating your .bashrc file, run the command:
+```bash
+gitmflasktemplate some-project-name
+
+## Git
+
+This project also works perfectly fine just by cloning the git repository. 
+A few notes:
+- This repository is intended to be a template, so everything is a placeholder. 
+- In order to create your own repository for the project you are working on, you will likely need to delete the 
