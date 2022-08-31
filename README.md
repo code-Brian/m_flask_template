@@ -5,11 +5,10 @@
   To get the full benefit of this template, add the following code snippets to your bashrc file:</p>
   
   ```bash
-  function pys(){
-      pipenv shell && echo "-------------------VIRTUAL ENVIRONMENT LAUNCHED-------------------"
-      python server.py && echo "-------------------- RUN SERVER --------------------"
+  function pyi(){
+      pipenv install flask PyMySQL flask-bcrypt && echo "-------------------FLASK PYMYSQL BCRYPT AND VIRTUAL ENVIRONMENT CREATED-------------------"
   }
-  export -f pys
+  export -f pyi
   
   function gitmflasktemplate(name){
       mkdir $name && echo "------------------- CREATING NEW PROJECT DIRECTORY -------------------"
@@ -20,4 +19,4 @@
   }
   export -f gitmflasktemplate
   ```
-<p> I hope this template is helpful. Please ping myself or Robert (rteet702) if there are any questions!</p>
+<p> I hope this template is helpful. Please ping myself or Robert (https://github.com/rteet702) if there are any questions!</p>
