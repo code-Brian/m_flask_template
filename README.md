@@ -22,10 +22,11 @@
   } 
   export -f gitmflasktemplate
   ```
-<p> I hope this template is helpful. Please ping myself or Robert (https://github.com/rteet702) if there are any questions!</p>
 In order to generate the template using this method, after updating your .bashrc file, run the command:
 ```bash
 gitmflasktemplate some-project-name
+```
+<p> I hope this template is helpful. Please ping myself or Robert (https://github.com/rteet702) if there are any questions!</p>
 
 ## Git
 
