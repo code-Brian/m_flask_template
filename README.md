@@ -7,21 +7,29 @@
 <p>This template is used with bashrc code to clone the template into a new project directory. 
   To get the full benefit of this template, add the following code snippets to your bashrc file:</p>
   
-  ```bash
-  function pyi(){
-      pipenv install flask PyMySQL flask-bcrypt && echo "-------------------FLASK PYMYSQL BCRYPT AND VIRTUAL ENVIRONMENT CREATED-------------------"
-  }
-  export -f pyi
-  
-  function gitmflasktemplate(name){
+```bash
+function full_flask(){
     git clone https://github.com/code-Brian/m_flask_template.git && echo "------------------- GIT REPO CLONED -------------------"
-    mv m-flask-template $1
-    cd $1 && echo "------------------- CHANGING INTO PROJECT DIRECTORY -------------------"
-    rm -rf .git && echo "------------------- GIT FILE DELETED -------------------"
-    pyi && echo "------------------- INSTALLING FLASK AND PYMYSQL -------------------"
-  } 
-  export -f gitmflasktemplate
-  ```
+    mv m_flask_template $1
+    cd $1
+    echo "------------------- CHANGING INTO PROJECT DIRECTORY -------------------"
+    rm -rf .git
+    echo "------------------- GIT FILE DELETED -------------------"
+    pipenv install flask pymysql
+    echo "-------------------------FLASK / PYMYSQL  INSTALLED-------------------------"
+    git init
+    git branch -M main
+    git add .
+    git commit -m '1: init commit'
+    git checkout -b dev
+    echo "-------------------------GIT REPO CREATED AND INIT -------------------------"
+    echo "-------------------------COMMIT DONE, CHECKED OUT  -------------------------"
+    echo "-------------------------DEVELOPMENT BRANCH 'dev'  -------------------------"
+    code .
+    echo "-------------------------OPENING PROJECT IN VSCODE -------------------------"
+} 
+export -f full_flask
+```
 In order to generate the template using this method, after updating your .bashrc file, run the command:
 ```bash
 gitmflasktemplate some-project-name
