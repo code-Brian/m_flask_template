@@ -32,7 +32,7 @@ export -f full_flask
 ```
 In order to generate the template using this method, after updating your .bashrc file, run the command:
 ```bash
-gitmflasktemplate some-project-name
+full_flask some-project-name
 ```
 
 ## Git
